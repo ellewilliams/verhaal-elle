@@ -22,7 +22,6 @@ module.exports = {
   flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     "gatsby-plugin-sass",
-    "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
