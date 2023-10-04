@@ -1,0 +1,9 @@
+:root {
+  --body-bg: #edeae0;
+  /* --component-bg: #edeae0; */
+  --main-navigation-color: #322e2f;
+  --hairline-color: color(#322e2f alpha(25%));
+  --text-color: #322e2f;
+  --text-color-secondary: #322e2f;
+  --list-border-color: var(#322e2f alpha(25%));
+}

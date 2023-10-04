@@ -1,0 +1,220 @@
+// Navigation.
+nav.menu {
+  min-height: 100vh;
+}
+
+.menu-wrapper {
+  padding: var(--spacer-4) 0 var(--spacer-4);
+  width: 100%;
+  height: 100%;
+
+  @include media-breakpoint-up(md) {
+    padding: var(--spacer-6) var(--spacer-7);
+
+    .container-fluid {
+      padding: 0!important;
+    }
+  }
+  
+  @include media-breakpoint-up(sm) {
+
+    .container-fluid {
+      padding-right: var(--spacer-6);
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    width: calc(80% - 30px);
+    margin-left: calc(20% + 30px)!important;
+
+    .container-fluid {
+      padding-left: 0;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: calc(90% - 30px);
+    margin-left: calc(10% + 30px)!important;
+  }
+}
+
+.menu {
+  position: fixed;
+  opacity: 1;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $secondary;
+  overflow-x: hidden;
+
+  &.menu--closed {
+  }
+
+  .menu-btn-close {
+    color: $primary;
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    background: none;
+    transition: color 0.3s var(--ease);
+    @extend %paragraph-base;
+    margin-bottom: var(--spacer-5);
+
+    &:hover {
+      color: rgba($primary, 0.7);
+    }
+  }
+
+  .email,
+  .phone-number,
+  .address,
+  .subscribe-text,
+  .locations {
+    color: var(--color-primary);
+    @extend %paragraph-base;
+    line-height: 130%;
+    white-space: pre-line;
+
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.3s var(--ease);
+
+      &:hover {
+        color: rgba($primary, 0.7);
+      }
+    }
+  }
+
+  .locations {
+    margin-bottom: var(--spacer-4);
+  }
+
+  .phone-number {
+    margin-bottom: var(--spacer-6);
+  }
+
+  .address {
+    margin-bottom: var(--spacer-6);
+    @extend %small-copy
+  }
+
+  .map {
+    margin-bottom: var(--spacer-4);
+  }
+
+  .mapboxgl-control-container {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .subscribe {
+    display: none;
+  }
+
+  .subscribe-input {
+    margin-top: var(--spacer-2);
+    margin-bottom: var(--spacer-5);
+    border-radius: unset;
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    height: rfs-value(35px);
+    padding: var(--spacer-1) var(--spacer-2) var(--spacer-2);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .socials {
+    margin-bottom: var(--spacer-3);
+
+    &:first-of-type {
+      margin-right: var(--spacer-2);
+    }
+  }
+
+  .copyright {
+    font-size: rfs-value(11px);
+    line-height: 130%;
+    opacity: 0.4;
+    color: var(--color-primary);
+    margin-bottom: var(--spacer-5);
+    margin-top: var(--spacer-5);
+
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.3s var(--ease);
+
+      &:hover {
+        color: rgba($primary, 0.7);
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .col-md-4 {
+      width: calc(33.3333333333% + 0.75rem);
+      padding-left: 0.5rem!important;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    .col-md-4 {
+      width: 420px;
+      padding-left: 0.5rem!important;
+    }
+  }
+}
+
+.menu-items {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: var(--spacer-5);
+
+  li {
+    &:not(:last-of-type) {
+      margin-bottom: 0;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: var(--spacer-0);
+      }
+    }
+  }
+
+  li > button,
+  a {
+    position: relative;
+    overflow: hidden;
+    color: $primary;
+    transition: color 0.3s ease-in-out;
+    @include fluid-font-size(2.5rem, 3.75rem);
+    line-height: 110%;
+    letter-spacing: rfs-value(1px);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: $headings-font-family;
+    font-weight: 300;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+      color: rgba($primary, 0.7);
+    }
+    // span {
+      // position: absolute;
+      // left: 0;
+      // z-index: 1;
+      // will-change: transform;
+      // visibility: hidden;
+      // overflow: hidden;
+      // width: 100%;
+      // opacity: 0;
+    // }
+  }
+}

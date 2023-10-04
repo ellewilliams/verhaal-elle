@@ -1,0 +1,21 @@
+.container-fluid.container-people {
+  min-height: 0 !important;
+  margin-bottom: var(--spacer-1);
+  @include media-breakpoint-up(md) {
+    margin-bottom: var(--spacer-9);
+  }
+  .name {
+    @include fluid-font-size(1.1rem, 1.3rem);
+    line-height: 130%;
+    margin-bottom: 0;
+  }
+
+  .role {
+    @include fluid-font-size(1.1rem, 1.3rem);
+    line-height: 130%;
+    margin-bottom: var(--spacer-5);
+    @include media-breakpoint-up(md) {
+      margin-bottom: var(--spacer-6);
+    }
+  }
+}

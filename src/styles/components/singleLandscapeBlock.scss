@@ -1,0 +1,13 @@
+.container-scope-project {
+  .single-landscape-block {
+    .feature-image-landscape {
+      height: 0;
+      width: 100%;
+      margin-bottom: var(--spacer-4);
+      padding-bottom: 60%;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "Domaine Text";
+  src: url("../fonts/DomaineText/Light/DomaineTextWeb-Light.woff2")
+      format("woff2"),
+    url("../fonts/DomaineText/Light/DomaineTextWeb-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Domaine Text";
+  src: url("../fonts/DomaineText/Light Italic/DomaineTextWeb-LightItalic.woff2")
+      format("woff2"),
+    url("../fonts/DomaineText/Light Italic/DomaineTextWeb-LightItalic.woff2")
+      format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gibson";
+  src: url("../fonts/Gibson/gibson-light-webfont.woff2") format("woff2"),
+    url("../fonts/Gibson/gibson-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gibson";
+  src: url("../fonts/Gibson/gibson-light-italic-webfont.woff2") format("woff2"),
+    url("../fonts/Gibson/gibson-light-italic-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}

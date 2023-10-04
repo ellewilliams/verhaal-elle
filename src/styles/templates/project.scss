@@ -1,0 +1,102 @@
+.container-scope-project {
+  .feature-image, .parallax {
+    margin-top: calc(var(--header-offset) * -1);
+    margin-left: calc(var(--spacer-7) * -1);
+    margin-right: calc(var(--spacer-7) * -1);
+    height: 85vh;
+    max-height: 800px;
+    margin-bottom: var(--spacer-7);
+    @include media-breakpoint-down(sm) {
+      height: 65vh;
+      margin-bottom: var(--spacer-6);
+    }
+
+    .gatsby-image-wrapper {
+      width: calc(100vw + 8rem)!important;
+
+      div, img {
+      }
+    }
+  }
+
+  .subheading {
+    margin-bottom: var(--spacer-2);
+    @include fluid-font-size(1.063rem, 1.188rem);
+    line-height: rfs-fluid-value(22.8px);
+  }
+
+  .heading {
+    margin-bottom: var(--spacer-3);
+    text-transform: uppercase;
+    line-height: 100%;
+    @include fluid-font-size(2.5rem, 3.75rem);
+    @include media-breakpoint-up(md) {
+      margin-bottom: var(--spacer-5);
+    }
+  }
+
+  .description {
+    margin-bottom: var(--spacer-4);
+    line-height: 130%;
+    white-space: pre-line;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    @extend %paragraph-base;
+    @include media-breakpoint-up(md) {
+      margin-bottom: var(--spacer-5);
+    }
+  }
+  .details {
+    margin-bottom: var(--spacer-6);
+    line-height: 120%;
+    white-space: pre-line;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    @extend %small-copy;
+    @include media-breakpoint-up(md) {
+      margin-bottom: var(--spacer-8);
+    }
+  }
+  .pagination-subheading {
+    margin-top: var(--spacer-8);
+  }
+}
+.parallax {
+  overflow: hidden;
+  position: relative;
+
+  .imageWrapper {
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transform-origin: top;
+  }
+}
+.pagination {
+  .gatsby-image-wrapper {
+    height: 0;
+    padding-bottom: 60%;
+  }
+}
+
+.feature-block {
+  .divider-start {
+    @include media-breakpoint-down(md) {
+      margin: var(--spacer-5) 0 var(--spacer-5) 0!important;
+    }
+  }
+  .divider-end {
+    @include media-breakpoint-down(md) {
+      margin: var(--spacer-5) 0 var(--spacer-6) 0!important;
+    }
+  }
+  .description {
+    margin-bottom: var(--spacer-6)!important;
+    @include media-breakpoint-up(md) {
+      margin-bottom: var(--spacer-7)!important;
+    }
+  }
+}
+

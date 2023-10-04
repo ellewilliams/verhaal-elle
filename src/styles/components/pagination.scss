@@ -1,0 +1,36 @@
+.pagination {
+  a {
+    color: var(--color-secondary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-secondary);
+    }
+  }
+
+  &-subheading {
+    margin-top: var(--spacer-3);
+    margin-bottom: var(--spacer-2);
+    @include media-breakpoint-up(md) {
+      margin-top: var(--spacer-5);
+      margin-bottom: var(--spacer-5);
+    }
+  }
+
+  &-image {
+    margin-bottom: var(--spacer-3);
+    @extend %image-zoom;
+    @include media-breakpoint-up(md) {
+      margin-bottom: var(--spacer-4);
+    }
+  }
+
+  &-heading {
+    text-transform: uppercase;
+    @include fluid-font-size(2.5rem, 3.75rem);
+    margin-bottom: var(--spacer-9);
+    @include media-breakpoint-up(md) {
+      margin-bottom: var(--spacer-9);
+    }
+  }
+}

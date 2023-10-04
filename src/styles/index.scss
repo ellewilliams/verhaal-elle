@@ -1,0 +1,137 @@
+// Bootstrap Utilities.
+@import "../../node_modules/bootstrap/scss/bootstrap-utilities.scss";
+
+// Fonts.
+@import "../styles/fonts/fonts";
+
+// Override Bootstrap Variables.
+// Colors.
+$primary: #edeae0;
+$secondary: #322e2f;
+$body-bg: $primary;
+$body-color: $secondary;
+$link-color: $secondary;
+
+// Grid.
+$grid-gutter-width: 2.5rem;
+
+// Vertical Rhythm.
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 3,
+  7: $spacer * 4,
+  8: $spacer * 5,
+	9: $spacer * 6,
+	10: $spacer * 7,
+) !default;
+
+// Typography.
+$font-size-sm: rfs-fluid-value(17px);
+$font-size-lg: rfs-fluid-value(19px);
+$font-family-serif: "Domaine Text";
+$headings-font-family: "Gibson";
+
+// Bootstrap Required.
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+
+// Global.
+:root {
+  --color-primary: #edeae0;
+  --color-secondary: #322e2f;
+  --color-body-bg: var(--color-primary);
+  --color-body: var(--color-secondary);
+  --color-link: var(--color-secondary);
+  --ease: cubic-bezier(.455,.03,.515,.955);
+  --ease-image-zoom: cubic-bezier(0.2, 0.3, 0.45, 0.94);
+  --header-offset: 78.6333px;
+  --header-mobile-offset: 52.6333px;
+  --navigation-transition-speed: 500ms;
+  --spacer-1: calc(1rem / 4);
+  --spacer-2: calc(1rem / 2);
+  --spacer-3: 1rem;
+  --spacer-4: calc(1rem * 1.5);
+  --spacer-5: calc(1rem * 2);
+  --spacer-6: calc(1rem * 3);
+  --spacer-7: calc(1rem * 4);
+  --spacer-8: calc(1rem * 5);
+  --spacer-9: calc(1rem * 6);
+  --spacer-10: calc(1rem * 7);
+  --spacer-11: calc(1rem * 8);
+	--spacer-12: calc(1rem * 9);
+}
+
+::selection {
+  color: var(--color-primary);
+  background: var(--color-secondary);
+}
+
+body {
+  font-family: $font-family-serif, "Times New Roman", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-secondary);
+
+  &:hover {
+    color: rgba($secondary, 0.7);
+  }
+}
+
+#___gatsby {
+  min-height: 100vh;
+}
+
+#gatsby-focus-wrapper {
+  background-color: $secondary;
+}
+
+h2 {
+  line-height:110%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c-scrollbar {
+  z-index: 99;
+}
+
+// Utilities.
+@import "./utilities/fluid-font-size";
+@import "./utilities/image-zoom";
+@import "./utilities/typography";
+
+// Components.
+@import "./components/layout";
+@import "./components/header";
+@import "./components/navigation";
+@import "./components/footer";
+@import "./components/portraitsBlock";
+@import "./components/singleLandscapeBlock";
+@import "./components/featureBlock";
+@import "./components/pagination";
+@import "./components/people";
+
+// Pages.
+@import "./pages/homePage";
+@import "./pages/projectsPage";
+@import "./pages/404";
+@import "./pages/contactPage";
+@import "./pages/aboutPage";
+@import "./pages/artistsPage";
+@import "./pages/pressPage";
+
+// Templates.
+@import "./templates/project";

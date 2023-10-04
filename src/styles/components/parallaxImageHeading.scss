@@ -1,0 +1,107 @@
+  // .fixed_wrapper {
+  //   position: relative;
+  //   overflow: hidden;
+  //   height: 55vh;
+  // }
+  // #topFixed {
+  //   flex-direction: column;
+  //   align-items: flex-start;
+  //   height: auto;
+  //   margin-top: var(--spacer-4);
+  //   padding: 0 calc(var(--bs-gutter-x) / 2);
+  //   @include media-breakpoint-up(lg) {
+  //     flex-direction: row;
+  //     align-items: center;
+  //     height: 60vh;
+  //     padding: 0;
+  //     margin-top: -76.5167px;
+  //   }
+  // }
+  // #scrollTarget{
+  //   bottom: -100vh;
+  //   position: absolute;
+  //   top: -100vh;
+  //   right: 0;
+  //   left: 0;
+  // }
+  // #fixedImg.fixed {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   left: 0;
+  //   height: 100%;
+  //   @include media-breakpoint-up(lg) {
+  //     top: -100vh;
+  //   }
+  //   &:after {
+  //     background-position: top center;
+  //   }
+  // }
+  // .container-feature-image {
+  //   position: relative;
+  //   overflow: hidden;
+  //   top: 0;
+  //   padding: unset;
+  //   margin-top: 0;
+    
+  //   @include media-breakpoint-up(lg) {
+  //     position: absolute;
+  //     overflow: hidden;
+  //     top: 0;
+  //     right: calc(calc(var(--bs-gutter-x) / 2) * -4);
+  //     width: calc(41.9vw - var(--bs-gutter-x) / 2);
+  //     margin-top: 0;
+  //     height: 100%;
+  //   }
+  // }
+
+  // .banner {
+  //   margin: var(--spacer-6) 0 var(--spacer-5);
+  //   padding: 0;
+  //   @include media-breakpoint-up(lg) {
+  //     margin: 0 0 var(--spacer-8);
+  //   }
+  // }
+
+  // .heading {
+  //   margin-bottom: 0;
+  //   text-transform: uppercase;
+  //   @include fluid-font-size(2.5rem, 4.063rem);
+  //   position: relative;
+  //   overflow: hidden;
+  //   min-height: rfs-value(60px);
+  //   @include media-breakpoint-up(lg) {
+  //     min-height: rfs-value(78px);
+  //   }
+  //   span {
+  //     position: absolute;
+  //     left: 0;
+  //     z-index: 1;
+  //     will-change: transform;
+  //     visibility: hidden;
+  //     overflow: hidden;
+  //     width: 100%;
+  //     opacity: 0;
+  //   }
+  // }
+
+  // .short-description {
+  //   margin-bottom: var(--spacer-5);
+  //   @extend %paragraph-base;
+  // }
+
+  // .divider {
+  //   width: rfs-value(40px);
+  //   border-bottom: 1px solid var(--color-secondary);
+  //   margin: 0 auto;
+  // }
+
+  // .long-description {
+  //   white-space: pre-line;
+  //   margin-bottom: var(--spacer-7);
+  //   @extend %paragraph-base;
+  //   @include media-breakpoint-up(lg) {
+  //     margin-bottom: var(--spacer-10);
+  //   }
+  // }
+

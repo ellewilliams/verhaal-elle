@@ -1,0 +1,12 @@
+.portraits-block {
+  .feature-image-portrait {
+    height: 0;
+    padding-bottom: 150%;
+    width: 100%;
+    margin-bottom: var(--spacer-4);
+    
+    @include media-breakpoint-up(md) {
+      margin-bottom: 2.5rem;
+    }
+  }
+}

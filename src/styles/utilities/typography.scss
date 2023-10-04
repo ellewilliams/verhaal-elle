@@ -1,0 +1,9 @@
+%paragraph-base {
+  @include fluid-font-size(1.1rem, 1.28rem);
+  line-height: 130%;
+  letter-spacing: -0.01em;
+}
+%small-copy {
+  @include fluid-font-size(0.8rem, 1rem);
+  line-height: 130%;
+}

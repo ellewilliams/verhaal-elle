@@ -1,0 +1,145 @@
+.container-scope-press {
+  .container-press {
+
+    .heading {
+      margin-top: var(--spacer-6);
+    }
+    .awards {
+      .heading {
+        margin-top: var(--spacer-4);
+      }
+    }
+
+    .text-wrapper {
+      margin-top: var(--spacer-2);
+      @include media-breakpoint-up(md) {
+        margin-top: var(--spacer-3);
+      }
+    }
+
+    .publication,
+    .title {
+      @extend %paragraph-base;
+      margin-bottom: 0px;
+    }
+    .link {
+      @extend %small-copy;
+      display: inline-block;
+      text-decoration: underline;
+      text-decoration-thickness: 0.05em;
+      text-underline-offset: 3px;
+      margin-top: var(--spacer-1);
+      cursor: pointer;
+    }
+
+    .article {
+      margin-bottom: var(--spacer-5);
+      text-align:center;
+      @include media-breakpoint-up(md) {
+        padding: 0;
+        width: calc(25% - 30px);
+        margin-right: 40px;
+        margin-bottom: var(--spacer-6);
+      }
+
+      .gatsby-image-wrapper {
+        height: 0;
+        padding-bottom: 70%;
+        @extend %image-zoom;
+      }
+    }
+
+    .article:nth-of-type(2n+1) {
+      padding-right: 0.7rem;
+      @include media-breakpoint-up(sm) {
+        padding-right: var(--spacer-3);
+      }
+      @include media-breakpoint-up(md) {
+        padding-right: 0;
+      }
+    }
+
+    .article:nth-of-type(2n+2) {
+      padding-left: 0.7rem;
+      @include media-breakpoint-up(sm) {
+        padding-left: var(--spacer-3);
+      }
+      @include media-breakpoint-up(md) {
+        padding-left: 0;
+      }
+    }
+
+    .article:nth-of-type(4n+4) {
+      margin-right: 0;
+    }
+
+    .awards {
+      padding-bottom: var(--spacer-7);
+    }
+
+    .award {
+      position: relative;
+      @include media-breakpoint-up(md) {
+        padding: 0px;
+      }
+
+      .text-wrapper {
+        @include media-breakpoint-down(md) {
+         p:nth-of-type(-n + 3) {
+          margin-bottom: 0px;
+         }
+        }
+        @include media-breakpoint-up(md) {
+          display: flex;
+
+          p {
+            padding-right: 20px;
+          }
+        }
+        border-bottom: 1px solid $secondary;
+        .link {
+          text-align: right;
+          margin-top: 0px;
+          padding-right: 0px;
+          svg {
+            width: 16px;
+            @include media-breakpoint-down(md) {
+              position: absolute;
+              top: 15px;
+              right: 20px;
+            }
+            path, polyline, line {
+              fill: none;
+              stroke-width: 1px;
+              stroke: #322e2f;
+            }
+          }
+        }
+      }
+    }
+
+    .awards-header {
+      font-size: rfs-value(13px);
+      line-height: 130%;
+
+      @include media-breakpoint-down(md) {
+        .text-wrapper {
+          display: flex;
+
+          p::after {
+            content: ",";
+            margin-right: 3px;
+          }
+          p:last-of-type::after {
+            content: "";
+          }
+        }
+      }
+      
+      p {
+        margin-bottom: 10px;
+      }
+    }
+
+  }
+}

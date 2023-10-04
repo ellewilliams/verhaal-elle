@@ -1,0 +1,58 @@
+.main {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container-fluid {
+  padding-right: var(--spacer-4);
+  padding-left: var(--spacer-4);
+}
+
+.content-wrapper {
+  padding: var(--spacer-5) var(--spacer-6) 0;
+  overflow: hidden;
+  z-index: 2;
+  background-color: $primary;
+  position: relative;
+  transition: transform var(--navigation-transition-speed) var(--ease);
+  -webkit-transition: transform var(--navigation-transition-speed)
+    var(--ease);
+  //will-change: transform;
+
+  &.menu--open {
+    transform: translate3d(-90%, var(--spacer-5), 0);
+    -webkit-transform: translate3d(-90%, var(--spacer-5), 0);
+    overflow:scroll;
+
+    @include media-breakpoint-up(sm) {
+      transform: translate3d(-80%, var(--spacer-5), 0);
+      -webkit-transform: translate3d(-80%, var(--spacer-5), 0);
+    }
+
+    @include media-breakpoint-up(md) {
+      transform: translate3d(calc(-41.6666666667% + 20px), var(--spacer-6), 0);
+      -webkit-transform: translate3d(calc(-41.6666666667% + 20px), var(--spacer-6), 0);
+    }
+
+    @include media-breakpoint-up(xl) {
+      transform: translate3d(calc(-490px), var(--spacer-6), 0);
+      transform: translate3d(calc(-490px), var(--spacer-6), 0);
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: var(--spacer-6) var(--spacer-7) 0 var(--spacer-7);
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: var(--spacer-4) 0 0 0;
+  }
+}
+
+.gatsby-image-wrapper, img {
+  vertical-align: middle;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
