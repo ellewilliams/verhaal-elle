@@ -70,10 +70,10 @@ export const Navigation = () => {
                   <button
                     onClick={() => {
                       toggleNavigation()
-                      navigate("/press")
+                      navigate("/featured")
                     }}
                   >
-                    Press
+                    Featured
                   </button>
                 </li>
                 <li>

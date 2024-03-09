@@ -15,12 +15,10 @@ export function useOnScreen<T extends Element>(ref: MutableRefObject<T>, rootMar
       }
     )
     if (ref.current) {
-      observer.observe(ref.current as Element) // Type assertion here
+      observer.observe(ref.current)
     }
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current as Element) // Type assertion here
-      }
+      observer.unobserve(ref.current)
     }
   }, []) // Empty array ensures that effect is only run on mount and unmount
 

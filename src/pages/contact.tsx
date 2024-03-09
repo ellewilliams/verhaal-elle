@@ -2,8 +2,6 @@ import * as React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { useSiteSettingsQuery } from "../queries/useSiteSettingsQuery"
-import mapboxgl from "!mapbox-gl"
-import "mapbox-gl/dist/mapbox-gl.css"
 import { useEffect } from "react"
 import instaGram from "../images/insta-icon-reverse.svg"
 import faceBook from "../images/facebook-icon-reverse.svg"
@@ -11,17 +9,6 @@ import faceBook from "../images/facebook-icon-reverse.svg"
 const ContactPage = () => {
   const { sanitySiteSettings } = useSiteSettingsQuery()
   const { email, number, address, instagramUrl, facebookUrl } = sanitySiteSettings
-
-  useEffect(() => {
-    mapboxgl.accessToken = "pk.eyJ1IjoidmVyaGFhbCIsImEiOiJja3I0Zmd2OXMwNXZnMnBxbGJvejA2bm03In0.7-dyN5uIhFGQEp-c_z9w_Q"
-    const map = new mapboxgl.Map({
-      container: "map-contact", // container id
-      style: "mapbox://styles/verhaal/ckr4fk39d0eld17r9r7d70suv", // style URL
-      center: [80, 9], // starting position [lng, lat]
-      zoom: 0.3, // starting zoom
-      pitch: 0,
-    })
-  }, [])
 
   return (
     <Layout className="contact">
@@ -57,11 +44,6 @@ const ContactPage = () => {
                 Get directions
               </a>
             </p> */}
-          </div>
-        </div>
-        <div className="row align-items-center justify-content-center">
-          <div className="col-10 col-md-6 col-xl-4 text-center">
-            <div id="map-contact" className="map" style={{ height: 240 }} />
           </div>
         </div>
         <div className="row align-items-center justify-content-center">

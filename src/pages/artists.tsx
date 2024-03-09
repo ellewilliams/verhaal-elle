@@ -2,9 +2,9 @@ import * as React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import { PortraitsBlock } from "../components/portraitsBlock"
-import { SingleLandscapeBlock } from "../components/singleLandscapeBlock"
-import { FeatureBlock } from "../components/featureBlock"
+import { OneImageVideoArtistBlock } from "../components/oneImageVideoArtistBlock"
+import { TwoImageVideoArtistBlock } from "../components/twoImageVideoArtistBlock"
+import { ThreeImagesArtistBlock } from "../components/threeImagesArtistBlock"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function ArtistsPage(props: any) {
@@ -16,41 +16,30 @@ export default function ArtistsPage(props: any) {
     <Layout className="artists">
       <SEO title="Artists" />
       <div className="container-fluid container-artists">
-        <div>
-          <div className="row align-items-center row-reverse-md">
-            <div className="col-md-6">
-              <h1 className="heading text-center">{heading}</h1>
-              <p className="short-description text-center">{shortDescription}</p>
-              <div className="divider" />
-            </div>
-            <div className="col-md-6">
-              <GatsbyImage
-                image={featureImage.asset.gatsbyImageData}
-                alt={featureImage.alt}
-                loading="eager"
-                objectFit="cover"
-                className="feature-image"
-              />
-            </div>
+        <div className="row align-items-center justify-content-center">
+          <div className="col-12 col-md-8 col-lg-6">
+            <h1 className="heading text-center">{heading}</h1>
+            <p className="short-description text-center">{shortDescription}</p>
+             <div className="divider" />
           </div>
         </div>
         <div>
           <div className="row">
             <div className="content-blocks">
               {blocks.length > 0 && blocks.map((block: any) => {
-                if (block._type === "portraitsBlockArtist") {
+                if (block._type === "oneImageVideoArtistBlock") {
                   return (
-                    <PortraitsBlock {...block} key={block._key} />
+                    <OneImageVideoArtistBlock {...block} key={block._key} />
                   )
                 }
-                if (block._type === "singleLandscapeBlockArtist") {
+                if (block._type === "twoImageVideoArtistBlock") {
                   return (
-                    <SingleLandscapeBlock {...block} key={block._key} />
+                    <TwoImageVideoArtistBlock {...block} key={block._key} />
                   )
                 }
-                if (block._type === "featureBlockArtist") {
+                if (block._type === "threeImagesArtistBlock") {
                   return (
-                    <FeatureBlock {...block} key={block._key} />
+                    <ThreeImagesArtistBlock {...block} key={block._key} />
                   )
                 }
               })}
@@ -66,18 +55,16 @@ export const query = graphql`
   query {
     sanityArtistPage {
       blocks {
-        ... on SanityFeatureBlockArtist {
+        ... on SanityThreeImagesArtistBlock {
           _key
           _type
-          blockTitle
-          description
           imageLeft {
             asset {
-              gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP])
+              gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP], aspectRatio: 1)
             }
             alt
           }
-          imageLeftSquare {
+          imageMiddle {
             asset {
               gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP], aspectRatio: 1)
             }
@@ -85,47 +72,46 @@ export const query = graphql`
           }
           imageRight {
             asset {
-              gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP])
+              gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP], aspectRatio: 1)
             }
             alt
           }
-          reverseLayout
         }
-        ... on SanityPortraitsBlockArtist  {
+        ... on SanityTwoImageVideoArtistBlock {
           _key
           _type
-          blockTitle
-          description
-          reverseImages
           imageLeft {
             alt
             asset {
-              gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP])
+              gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP], width: 800)
             }
           }
           imageRight {
             alt
             asset {
-              gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP])
+              gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP], width: 800)
+            }
+          }
+          video {
+            asset {
+              url
             }
           }
         }
-        ... on SanitySingleLandscapeBlockArtist  {
+        ... on SanityOneImageVideoArtistBlock {
           _key
           _type
-          blockTitle
-          description
-          image {
+          imageRight {
             alt
             asset {
-              gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP])
+              gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP], width: 800)
             }
           }
-        }
-      }
-      featureImage {
-        asset {
-          gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP])
+          video {
+            asset {
+              url
+            }
+          }
         }
       }
       heading

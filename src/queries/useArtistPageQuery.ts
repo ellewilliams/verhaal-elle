@@ -33,17 +33,16 @@ export const useArtistPageQuery = (): ArtistQueryResult => {
       sanityArtistPage {
        
         blocks {
-          ... on SanityFeatureBlockArtist {
+          ... on SanityThreeImagesArtistBlock {
             _key
             _type
-            description
             imageLeft {
               asset {
-                gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP], width: 800)
+                gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP], aspectRatio: 1, width: 800)
               }
               alt
             }
-            imageLeftSquare {
+            imageMiddle {
               asset {
                 gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP], aspectRatio: 1, width: 800)
               }
@@ -51,16 +50,14 @@ export const useArtistPageQuery = (): ArtistQueryResult => {
             }
             imageRight {
               asset {
-                gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP], width: 800)
+                gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP], aspectRatio: 1, width: 800)
               }
               alt
             }
-            reverseLayout
           }
-          ... on SanityPortraitsBlockArtist {
+          ... on SanityTwoImageVideoArtistBlock {
             _key
             _type
-            reverseImages
             imageLeft {
               alt
               asset {
@@ -73,21 +70,26 @@ export const useArtistPageQuery = (): ArtistQueryResult => {
                 gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP], width: 800)
               }
             }
+            video {
+              asset {
+                url
+              }
+            }
           }
-          ... on SanitySingleLandscapeBlockArtist {
+          ... on SanityOneImageVideoArtistBlock {
             _key
             _type
-            image {
+            imageRight {
               alt
               asset {
                 gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP], width: 800)
               }
             }
-          }
-        }
-        featureImage {
-          asset {
-            gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP], width: 800)
+            video {
+              asset {
+                url
+              }
+            }
           }
         }
         heading

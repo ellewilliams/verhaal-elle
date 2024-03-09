@@ -17,9 +17,9 @@ import people from "./object/people"
 import artist from "./object/artist"
 import article from "./object/article"
 import award from "./object/award"
-import portraitsBlockArtist from "./object/portraitsBlockArtist"
-import singleLandscapeBlockArtist from "./object/singleLandscapeBlockArtist"
-import featureBlockArtist from "./object/featureBlockArtist"
+import oneImageVideoArtistBlock from "./object/oneImageVideoArtistBlock"
+import twoImageVideoArtistBlock from "./object/twoImageVideoArtistBlock"
+import threeImagesArtistBlock from "./object/threeImagesArtistBlock"
 // Documents.
 import siteSettings from "./document/siteSettings"
 import indexPage from "./document/homePage"
@@ -47,9 +47,9 @@ export default createSchema({
     artist,
     article,
     award,
-    portraitsBlockArtist,
-    singleLandscapeBlockArtist,
-    featureBlockArtist,
+    oneImageVideoArtistBlock,
+    twoImageVideoArtistBlock,
+    threeImagesArtistBlock,
     // Document.
     siteSettings,
     indexPage,

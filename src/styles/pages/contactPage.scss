@@ -1,6 +1,6 @@
 .container-scope-contact {
   .container-contact {
-    margin-top: var(--spacer-6);
+    margin-top: var(--spacer-8);
     min-height: calc(100vh - var(--spacer-6));
   }
 
@@ -10,9 +10,6 @@
     text-transform: uppercase;
     line-height: 100%;
     @include fluid-font-size(2.5rem, 3.75rem);
-    @include media-breakpoint-up(md) {
-      margin-top: var(--spacer-8);
-    }
   }
 
   .divider {

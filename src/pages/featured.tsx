@@ -19,7 +19,7 @@ const PressPage = () => {
 
   return (
     <Layout className="press">
-      <SEO title="Press" />
+      <SEO title="Featured" />
       <div className="container-fluid container-press">
         <div>
           <div className="row align-items-center row-reverse-md">

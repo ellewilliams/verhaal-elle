@@ -1,7 +1,7 @@
 export default {
   name: "pressPage",
   type: "document",
-  title: "Press Page",
+  title: "Featured",
   fields: [
     {
       name: "heading",
@@ -38,7 +38,7 @@ export default {
     
   ],
   initialValue: {
-    heading: "Press",
+    heading: "Featured",
     shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec tincidunt sem. Sed sodales nunc non ullamcorper semper.",
   },
 }

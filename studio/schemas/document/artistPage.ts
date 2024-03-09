@@ -16,20 +16,14 @@ export default {
       validation: (Rule: { required: () => void; }) => Rule.required(),
     },
     {
-      name: "featureImage",
-      title:"Feature Image",
-      type: "image",
-      validation: (Rule: { required: () => void; }) => Rule.required(),
-    },
-    {
       name: "blocks",
       title: "Content Blocks",
       description: "Repeatable content layout blocks",
       type: "array",
       of: [
-        { type: "portraitsBlockArtist"},
-        { type: "singleLandscapeBlockArtist"},
-        { type: "featureBlockArtist"},
+        { type: "oneImageVideoArtistBlock"},
+        { type: "twoImageVideoArtistBlock"},
+        { type: "threeImagesArtistBlock"},
       ],
     },
     
