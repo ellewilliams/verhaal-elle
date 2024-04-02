@@ -24,7 +24,6 @@ const ProjectsPage = () => {
                   className="feature-image"
                 />
                 <div className="text-wrapper">
-                  <p className="text-center paragraph">Case study</p>
                   <h1 className="text-center heading">{project.heading} </h1>
                 </div>
               </Link>
