@@ -58,6 +58,7 @@ exports.createPages = async ({ graphql, actions }) => {
               alt
             }
             heading
+						location
           }
           previous {
             id

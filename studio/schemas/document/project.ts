@@ -15,6 +15,12 @@ export default {
       type: "string",
       validation: (Rule: { required: () => void; }) => Rule.required(),
     },
+		{
+      name: "location",
+      title: "Location",
+      type: "string",
+      validation: (Rule: { required: () => void; }) => Rule.required(),
+    },
     {
       name: "description",
       title: "Description",

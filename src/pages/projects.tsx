@@ -25,6 +25,7 @@ const ProjectsPage = () => {
                 />
                 <div className="text-wrapper">
                   <h1 className="text-center heading">{project.heading} </h1>
+									<p className="text-center paragraph">{project.location}</p>
                 </div>
               </Link>
             </div>

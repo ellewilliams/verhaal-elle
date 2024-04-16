@@ -70,12 +70,13 @@
     }
     .paragraph {
       @extend %paragraph-base;
-      margin-bottom: 10px;
+      margin-bottom: 0px;
     }
     .heading {
       text-transform: uppercase;
       @include fluid-font-size(2rem, 2.6rem);
       line-height: 100%;
+			margin-bottom: 0.25rem;
     }
   }
 

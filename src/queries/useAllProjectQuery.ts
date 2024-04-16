@@ -13,6 +13,7 @@ export type ProjectQueryNodes = {
     current: string
   }
   heading: string
+	location: string
 }
 
 interface ProjectQueryResult {
@@ -42,6 +43,7 @@ export const useAllProjectQuery = (): ProjectQueryResult => {
             current
           }
           heading
+					location
         }
       }
     }

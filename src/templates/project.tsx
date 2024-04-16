@@ -100,6 +100,7 @@ export const query = graphql`
         current
       }
       heading
+			location
       description
       projectDetails
       block {
