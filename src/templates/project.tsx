@@ -20,7 +20,7 @@ export default function Project(props: any) {
     <Layout className="project">
       <SEO title={project.heading} />
       <Controller>
-        <Scene
+        <Scene 
           indicators={false}
           duration="250%"
           pin={false}
