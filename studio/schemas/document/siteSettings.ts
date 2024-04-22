@@ -27,13 +27,13 @@ export default {
     },
     {
       name: "number",
-      title: "Contact Number",
-      type: "string",
+      title: "Contact Number + Address",
+      type: "text",
       validation: (Rule: { required: () => void; }) => Rule.required(),
     },
     {
       name: "address",
-      title: "Address",
+      title: "Location",
       type: "text",
       validation: (Rule: { required: () => void; }) => Rule.required(),
     },
