@@ -91,18 +91,13 @@ export const Navigation = () => {
           </div>
           <div className="row justify-content-md-end">
             <div className="col-12 col-sm-12 col-md-4">
-              <p className="locations">
-                Sydney | Dubai
-              </p>
               <p className="email mb-0">
                 <a href={`mailto:${email}`} aria-label="Email Verhaal">
                   {email}
                 </a>
               </p>
               <p className="phone-number">
-                <a href={`tel:${number}`} aria-label="Call Verhaal">
-                  {number}
-                </a>
+                {address}
               </p>
             </div>
           </div>

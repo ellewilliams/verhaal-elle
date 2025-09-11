@@ -8,7 +8,7 @@ import faceBook from "../images/facebook-icon-reverse.svg"
 
 const ContactPage = () => {
   const { sanitySiteSettings } = useSiteSettingsQuery()
-  const { email, number, address, instagramUrl, facebookUrl } = sanitySiteSettings
+  const { email, number, address, location, instagramUrl, facebookUrl } = sanitySiteSettings
 
   return (
     <Layout className="contact">
@@ -26,14 +26,14 @@ const ContactPage = () => {
         </div>
         <div className="row align-items-center justify-content-center">
           <div className="col-10 col-md-8 col-lg-6 text-center">
-          <p className="locations">
-              Sydney | Dubai
-            </p>
-            <p className="email mb-0">
+            <p className="email">
+							<div className="small-text">Email</div>
               <a href={`mailto:${email}`}>{email}</a>
             </p>
+						<h2 className="mt-5">DUBAI</h2>
             <p className="phone-number">
-              <a href={`tel:${number}`}>{number}</a>
+							<div className="small-text">Address</div>
+              {number}
             </p>
             {/* <p className="address">{address}</p>
             <p className="directions">

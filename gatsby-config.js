@@ -19,16 +19,17 @@ module.exports = {
     lang: siteMeta.language,
     icon: siteMeta.iconPath,
   },
-  flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "UA-191544336-1",
-      },
-    },
+		{
+			resolve: `gatsby-plugin-google-gtag`,
+			options: {
+				trackingIds: [
+					"G-V9VS2J4H1F", // Google Analytics / GA
+				],
+			},
+		},
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
