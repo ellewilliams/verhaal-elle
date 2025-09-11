@@ -110,7 +110,7 @@ module.exports = {
         // use `graphqlTag` to specify the tag name. Defaults to `default`.
         graphqlTag: 'default',
         overlayDrafts: true,
-        watchMode: true,
+        watchMode: process.env.NODE_ENV === 'development',
       },
     },
   ],
