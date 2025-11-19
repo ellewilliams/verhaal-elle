@@ -11,9 +11,10 @@ interface SEOProps {
   keywords?: []
   title: string
   image?: string
+  noTemplate?: boolean
 }
 
-const SEO: FC<SEOProps> = ({ description, lang, meta = [], keywords, title, image }) => (
+const SEO: FC<SEOProps> = ({ description, lang, meta = [], keywords, title, image, noTemplate }) => (
   <StaticQuery
     query={siteMetadataQuery}
     render={data => {
@@ -32,7 +33,7 @@ const SEO: FC<SEOProps> = ({ description, lang, meta = [], keywords, title, imag
             lang: metaLang,
           }}
           title={title}
-          titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+          titleTemplate={noTemplate ? undefined : `%s | ${data.site.siteMetadata.title}`}
           meta={[
             {
               name: `description`,

@@ -72,7 +72,7 @@ const IndexPage = () => {
             <div className={`mb-4 marquee-item ${
               isSingleImage
                 ? "col-8 offset-2 col-md-6 offset-md-3"
-                : "col-7 offset-5 col-md-5 offset-md-6 push-md-0"
+                : "col-7 offset-5 col-md-5 offset-md-7 push-md-0 col-xl-4"
             }`}>
               {renderRightMedia(block)}
             </div>
@@ -84,7 +84,7 @@ const IndexPage = () => {
 
   return (
     <Layout className="home">
-      <SEO title="Home" />
+      <SEO title="Verhaal: Stories, Formed." noTemplate />
       <div className="container-fluid container-display-heading">
         <div className="row justify-content-center align-items-center">
           <div className="col-lg-6 col-md-7 col-sm-10 col-10">
