@@ -77,6 +77,12 @@ export const useIndexPageQuery = (): QueryResult => {
                 )
               }
             }
+						videoRight {
+							asset {
+								url
+								mimeType
+							}
+						}
           }
         }
       }

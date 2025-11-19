@@ -15,6 +15,15 @@ export default {
       title: "Image Right",
       description: "Small right aligned image (square)",
     },
+		{
+      name: 'videoRight',
+      type: 'file',
+      title: 'Video Right (Portrait)',
+      description: "Upload a video instead of an image",
+      options: {
+        accept: 'video/*'
+      },
+    },
     {
       name: "reverseImages",
       type: "boolean",

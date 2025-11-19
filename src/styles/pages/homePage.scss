@@ -44,6 +44,9 @@
   width: 100%;
   top: 0;
   left: 0;
+}
+
+.marquee {
   animation: marquee 80s linear 0.1s infinite;
   -webkit-animation: marquee 80s 0.1s linear infinite;
 }
@@ -57,6 +60,9 @@
     width: 100%;
     @include media-breakpoint-up(md) {
       margin-bottom: 5rem!important;
+    }
+		@include media-breakpoint-up(xl) {
+      margin-bottom: 6rem!important;
     }
   }
 }
