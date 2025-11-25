@@ -36,7 +36,6 @@ const IndexPage = () => {
         <GatsbyImage
           image={imageData}
           alt={alt}
-          loading="lazy"
           objectFit="cover"
         />
       )
@@ -63,7 +62,6 @@ const IndexPage = () => {
               <GatsbyImage
                 image={block.imageLeft.asset.gatsbyImageData}
                 alt={block.imageLeft.alt}
-                loading="lazy"
                 objectFit="cover"
               />
             </div>
@@ -114,7 +112,6 @@ const IndexPage = () => {
                         <GatsbyImage
                           image={block.imageLeft.asset.gatsbyImageData}
                           alt={block.imageLeft.alt}
-                          loading="lazy"
                           objectFit="cover"
                         />
                       )}
