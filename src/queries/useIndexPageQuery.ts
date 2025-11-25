@@ -35,9 +35,9 @@ export const useIndexPageQuery = (): QueryResult => {
               alt
               asset {
                 gatsbyImageData(
-                  placeholder: BLURRED
+                  placeholder: NONE
                   formats: [AUTO, WEBP]
-                  width: 1000
+                  width: 2000
                 )
               }
             }
@@ -45,9 +45,9 @@ export const useIndexPageQuery = (): QueryResult => {
               alt
               asset {
                 gatsbyImageData(
-                  placeholder: BLURRED
+                  placeholder: NONE
                   formats: [AUTO, WEBP]
-                  width: 800
+                  width: 1000
                 )
               }
             }
@@ -60,9 +60,9 @@ export const useIndexPageQuery = (): QueryResult => {
               alt
               asset {
                 gatsbyImageData(
-                  placeholder: BLURRED
+                  placeholder: NONE
                   formats: [AUTO, WEBP]
-                  width: 800
+                  width: 1400
                 )
               }
             }
@@ -71,9 +71,9 @@ export const useIndexPageQuery = (): QueryResult => {
               alt
               asset {
                 gatsbyImageData(
-                  placeholder: BLURRED
+                  placeholder: NONE
                   formats: [AUTO, WEBP]
-                  width: 800
+                  width: 1000
                 )
               }
             }

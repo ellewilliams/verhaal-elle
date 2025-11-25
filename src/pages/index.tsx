@@ -37,6 +37,9 @@ const IndexPage = () => {
           image={imageData}
           alt={alt}
           objectFit="cover"
+					layout="fullWidth"
+					loading="eager"
+					placeholder="none"
         />
       )
     }
@@ -63,6 +66,9 @@ const IndexPage = () => {
                 image={block.imageLeft.asset.gatsbyImageData}
                 alt={block.imageLeft.alt}
                 objectFit="cover"
+								layout="fullWidth"
+								loading="eager"
+								placeholder="none"
               />
             </div>
           )}
@@ -113,6 +119,9 @@ const IndexPage = () => {
                           image={block.imageLeft.asset.gatsbyImageData}
                           alt={block.imageLeft.alt}
                           objectFit="cover"
+													layout="fullWidth"
+													loading="eager"
+													placeholder="none"
                         />
                       )}
                     </div>
